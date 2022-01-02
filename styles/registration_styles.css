@@ -1,9 +1,13 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
 .form{
 
     position: relative;
     background:  linear-gradient(to top, #f1f1f1 ,white ) ;
     padding: 20px;
-    width: 318px;
+    width: 338px;
     margin: 0 auto;
   
     border: 1px solid #ededed;
@@ -93,12 +97,12 @@
 }
 
 @media(max-width: 360px){
-    .form_reg{
+    .form{
         padding: 10px;
         margin: 0;
     }
-    .div{
-        width: 338px;
+    .underline{
+        width: 360px;
     }
     
     
