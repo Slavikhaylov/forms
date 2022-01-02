@@ -2,7 +2,8 @@
 
     position: relative;
     background:  linear-gradient(to top, #f1f1f1 ,white ) ;
-    padding: 20px;
+    /* background:  linear-gradient(to top, #fff4968e 60%,#fff49610 ) ; */
+    padding: 15px 20px;
     width: 318px;
     margin: 0 auto;
     border: 1px solid #ededed;
@@ -58,6 +59,7 @@
 } 
 .form_button{
     display: flex;
+    flex-wrap: wrap;
     margin: 30px  auto;
     justify-content: space-around;
     z-index: 1;
@@ -75,12 +77,15 @@
     border-bottom: 1px solid #7d8487;
     z-index: 2;
 }
+.sign-in_button{
+    letter-spacing: 2px;
+}
 .form_button-submit:hover{
     background: linear-gradient(to bottom , #c6c6c6 , white);
 
 }
 .sign-in{
-    z-index: 2;
+    z-index: 1;
     margin-top: 10px;
     text-decoration: none;
 
@@ -90,6 +95,23 @@
     text-decoration: underline;
 
 }
+.forgot_pswwd{
+    padding-top: 25px;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(35, 35, 158);
+}
+.forgot_pswwd:hover{
+    text-decoration: underline ;
+
+}
+
+
+
 
 @media(max-width: 360px){
     .form_reg{
