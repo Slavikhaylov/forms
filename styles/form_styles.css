@@ -4,29 +4,23 @@ html,body{
 }
 .form{
 
-    position: relative;
     background:  linear-gradient(to top, #f1f1f1 ,white ) ;
-    padding: 20px;
-    width: 338px;
-    margin: 0 auto;
-  
-    border: 1px solid #ededed;
+    width: 100%;
+    border: 1px dashed #cccccc;
     border-radius: 3px;
+    z-index: -2;
 }
 
-
-.form::before{
-    content: "";
-    position: absolute;
-    top: 5px ;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border: 1px dashed #cdcdcd;
- 
+.border{
+    background:  linear-gradient(to top, #f1f1f1 ,white ) ;
+    border: 1px solid #cccccc ;
+    width: 360px;
+    padding: 10px;
+    margin: 0 auto;
 }
+
 .underline{
-    width: 358px;
+    width: 377px;
     height: 2px;
     border-radius: 2px;
     border: 1px solid #cdcdcd ;
@@ -48,7 +42,7 @@ html,body{
 .block-name{
     display: flex;
     margin: 0 auto;
-    width: 96%;
+    width: 95%;
 }
 
 .form input{  
@@ -84,6 +78,7 @@ html,body{
 }
 .form_button-submit:hover{
     background: linear-gradient(to bottom , #c6c6c6 , white);
+    cursor: pointer;
 
 }
 .sign-in{
@@ -122,14 +117,14 @@ html,body{
 
 
 
-@media(max-width: 400px){
-    .form{
-        width: 90%;
-        padding: 20px;
+@media(max-width: 430px){
+    .border{
+        width: 96%;
+        padding: 5px;
         margin: 0;
     }
     .underline{
-        width: 100%;
+        width: 99%;
     }
     
     
