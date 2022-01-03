@@ -63,6 +63,7 @@ html,body{
 } 
 .form_button{
     display: flex;
+    flex-wrap: wrap;
     margin: 30px  auto;
     justify-content: space-around;
     z-index: 1;
@@ -95,6 +96,30 @@ html,body{
     text-decoration: underline;
 
 }
+
+.forgot_pswwd{
+    padding-top: 25px;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(35, 35, 158);
+}
+.forgot_pswwd:hover{
+    text-decoration: underline ;
+
+}
+
+
+
+.help-text{
+    margin: 30px 5px;
+    text-align: center;
+}
+
+
 
 @media(max-width: 360px){
     .form{
