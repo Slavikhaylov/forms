@@ -39,6 +39,7 @@ html,body{
     font-family: CyrillicOld;
     width: 100%;
     display: block;
+    letter-spacing: 4px;
     text-align: center;
     color: #666666; 
     text-shadow: 0 1px #fff, 0 2px #666666 ;
@@ -121,16 +122,22 @@ html,body{
 
 
 
-@media(max-width: 360px){
+@media(max-width: 400px){
     .form{
-        padding: 10px;
+        width: 90%;
+        padding: 20px;
         margin: 0;
     }
     .underline{
-        width: 358px;
+        width: 100%;
     }
     
     
+}
+@media(max-width: 360px){
+    .form_title{
+        letter-spacing: 2px;
+    }
 }
 @font-face {
     font-family: "CyrillicOld" ;
