@@ -1,0 +1,78 @@
+<!-- 
+{% extends "sign_user/base.html" %}
+{% load static %}
+
+{% block title %}
+    Registration
+{% endblock %}
+{% block body %} -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/form_styles.css">
+    <title>Registration</title>
+</head>
+<body>
+
+    <div class="border">
+        <form action="" class="form" method="post">
+            <!-- {% csrf_token %} -->
+
+            <div class="block">
+                <h1 class="form_title">Регистрация </h1>
+                <div class="block-name">
+                    <input id="id_first_name" placeholder="Имя" type="text" name="first_name" >
+                        <label class="first_name _name">Поле нужно заполнить</label>
+                    <input id="id_last_name" placeholder="Фамилия" type="text" name="last_name" >
+                        <label class="last_name _name">Поле нужно заполнить</label>
+
+<!-- {#                    {{ form.first_name }}#}
+    {#                    {{ form.last_name }}#} -->
+</div>
+                <input id="id_email" placeholder="Email" type="text" name="email" >
+                    <label class="email" for="id_email">Email введён не корректно</label>
+                <input id="id_username" placeholder="Логин" type="text" name="username" >
+                    <label for="login" class="username">Поле нужно заполнить</label>
+                <input id="id_new_password1" placeholder="Пароль" type="password" name="password1" >
+                    <label  for="password1" class="password1">Минимум 8 символов </label>
+                <input id="id_new_password2" placeholder="Подтвердите пароль" type="password" name="password2" >
+                    <label for="_password2" class="password2">Пароли не совпадают</label>
+<!-- {#                {{ form.email }}#}
+{#                {{ form.username }}#}
+{#                {{ form.password1 }}#}
+{#                {{ form.password2 }}#}
+                {% for message in messages %} -->
+                    <!-- <p style="text-align: center">{{ message }}</p> -->
+                    <br>
+                <!-- {% endfor %} -->
+
+                <div class="form_button">
+                    <button class="form_button-submit" type="submit">Регистрация</button>
+                    <a class="sign-in" href="{% url "login" %}">Войти </a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    
+    <script src="scripts/scripts_form.js"></script>
+        
+
+
+
+</body>
+</html>
+
+<!-- 
+{#    {{ form.first_name }}#}
+{#    {{ form.last_name }}#}
+{#    {{ form.email }}#}
+{#    {{ form.username }}#}
+{#    {{ form.password1 }}#}
+{#    {{ form.password2 }}#}
+{#    {{ form.as_p }}#}
+
+{% endblock %} -->
