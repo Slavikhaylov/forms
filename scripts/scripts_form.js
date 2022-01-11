@@ -126,8 +126,9 @@ form.addEventListener('submit', (e)=>{
     
         if(err === 0){
             document.querySelector('.form_button-submit').submit
-            form.submit
+            form.submit()
         }
+        else{err=0}
     
 })
 
