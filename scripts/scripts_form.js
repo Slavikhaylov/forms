@@ -8,7 +8,9 @@ const eEmail = document.querySelector('.email')
 const username = document.getElementById('id_username')
 const eUsername = document.querySelector('.username')
 const password1 = document.getElementById('id_new_password1')
-const ePassword1 = document.querySelector('.password1')
+const e1Password = document.querySelector('.password-err1')
+const e2Password = document.querySelector('.password-err2')
+const e3Password = document.querySelector('.password-err3')
 const password2 = document.getElementById('id_new_password2')
 const ePassword2 = document.querySelector('.password2')
 
@@ -17,8 +19,9 @@ let pass2
 let val
 let err = 0
 const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-
+const pas1  = /[a-zA-Z0-9]{8,}/
+const pas2  = /[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/
+const pas3  = /123456|qwerty/
 function classRemove(nameTag) {
     nameTag.classList.remove('err')
 }
@@ -52,16 +55,27 @@ username.addEventListener('blur', (e)=>{
 })
 password1.addEventListener('blur', (e)=>{
     pass1 = document.getElementById('id_new_password1').value
-    if(pass1.length < 8){
-        showError(ePassword1) 
+    if(! pas1.test(String(pass1))){
+        showError(e1Password) 
+    }
+    else if(! pas2.test(String(pass1))){
+        showError(e2Password) 
+    }
+    else if(pas3.test(String(pass1))){
+        showError(e3Password) 
     }
 })  
+
+    
+
+
 password2.addEventListener('blur', (e)=>{
     pass1 = document.getElementById('id_new_password1').value
     pass2 = document.getElementById('id_new_password2').value
     if(pass1 != pass2){
         showError(ePassword2) 
     }
+
 })  
 
 
