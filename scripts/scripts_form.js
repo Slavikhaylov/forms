@@ -19,9 +19,8 @@ let pass2
 let val
 let err = 0
 const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const pas1  = /[a-zA-Z0-9]{8,}/
-const pas2  = /[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/
-const pas3  = /[0-9]{5,}|qwerty|q1w2e3|123asd|asd123|password|1q2w3e/
+const pas1  = /[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/
+const pas2  = /[0-9]{5,}|qwerty|q1w2e3|123asd|asd123|password|1q2w3e/
 function classRemove(nameTag) {
     nameTag.classList.remove('err')
 }
@@ -55,13 +54,13 @@ username.addEventListener('blur', (e)=>{
 })
 password1.addEventListener('blur', (e)=>{
     pass1 = document.getElementById('id_new_password1').value
-    if(! pas1.test(String(pass1))){
+    if(pass1.length < 8){
         showError(e1Password) 
     }
-    else if(! pas2.test(String(pass1))){
+    else if(! pas1.test(String(pass1))){
         showError(e2Password) 
     }
-    else if(pas3.test(String(pass1))){
+    else if(pas2.test(String(pass1))){
         showError(e3Password) 
     }
 })  
@@ -108,13 +107,13 @@ form.addEventListener('submit', (e)=>{
     
 
               pass1 = document.getElementById('id_new_password1').value
-            if(! pas1.test(String(pass1))){
+            if(pass1.length < 8){
                 showError(e1Password) 
             }
-            else if(! pas2.test(String(pass1))){
+            else if(! pas1.test(String(pass1))){
                 showError(e2Password) 
             }
-            else if(pas3.test(String(pass1))){
+            else if(pas2.test(String(pass1))){
                 showError(e3Password) 
             }
         pass1 = document.getElementById('id_new_password1').value
