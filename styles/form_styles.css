@@ -159,10 +159,46 @@ right: 0;
 margin-right: 10px;    
 }
 
+.container{
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 200px;
 
+}
+.number{
+    display: block;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 100px;
+    margin: 30px auto;
+    color: rgb(10, 10, 30);
+    font-family: CyrillicOld ;
+    text-shadow: 0 1px #fff, 0 5px 10px #666666 ;
+
+}
+.number::after{
+    content: "";
+    display: block;
+    width: 100px;
+    background-color: #ff7373;
+    height: 1px;
+    margin: 50px auto;
+
+}
+.info{
+    display: block;
+    line-height: 25px;
+    margin: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.815)
+}
 
 
 @media(max-width: 430px){
+    .container{
+        margin-top: 100px;
+    }
     .border{
         width: 96%;
         padding: 5px;
