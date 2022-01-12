@@ -160,7 +160,7 @@ margin-right: 10px;
 }
 
 .container{
-    max-width: 550px;
+    max-width: 600px;
     margin: 0 auto;
     margin-top: 200px;
 
@@ -181,7 +181,7 @@ margin-right: 10px;
     display: block;
     width: 100px;
     background-color: #ff7373;
-    height: 1px;
+    height: 2px;
     margin: 50px auto;
 
 }
