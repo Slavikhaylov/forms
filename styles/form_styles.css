@@ -168,8 +168,8 @@ margin-right: 10px;
 .number{
     display: block;
     width: fit-content;
-    font-weight: bold;
-    font-size: 100px;
+    font-weight: 300;
+    font-size: 125px;
     margin: 30px auto;
     color: rgb(10, 10, 30);
     font-family: CyrillicOld ;
