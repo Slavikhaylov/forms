@@ -19,15 +19,15 @@
     
     <div class="border">
         <form action="" class="form" method="post">
-            {% csrf_token %}
+            <!-- {% csrf_token %} -->
             <h1 class="form_title">Вход </h1>
             
             <!-- {#            <input placeholder="Логин" type="text" name="username" id="id_username" autofocus required autocomplete="username">#} -->
-            <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username" placeholder="Логин">
+            <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150"  id="id_username" placeholder="Логин">
             <label for="login" class="username">Поле нужно заполнить</label>
             <!-- {#            <input placeholder="Пароль" type="password" name="password">#} -->
-            <input placeholder="Пароль" type="password" name="password" autocomplete="current-password" required id="id_password">
-            <label  for="password1" class="password1">Минимум 8 символов </label>
+            <input placeholder="Пароль" type="password" name="password" autocomplete="current-password"  id="id_password">
+            <label  for="password1" class="password"> Поле нужно заполнить </label>
             
             <p style="text-align: center">
                 <!-- {% for message in messages %}
